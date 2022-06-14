@@ -12,13 +12,17 @@
         aria-label="Toggle navigation"
       ></button>
       <div class="navbar-nav" v-if="isLoggedIn">
-        <router-link to="/dashboard">Dashboard</router-link>
+        <router-link class="nav-item nav-link" to="/dashboard"
+          >Dashboard</router-link
+        >
         <a class="nav-item nav-link" @click="logout">Logout</a>
       </div>
       <div class="navbar-nav" v-else>
-        <router-link to="/">Home</router-link>
-        <router-link to="/login">Login</router-link>
-        <router-link to="/register">Register</router-link>
+        <router-link class="nav-item nav-link" to="/">Home</router-link>
+        <router-link class="nav-item nav-link" to="/login">Login</router-link>
+        <router-link class="nav-item nav-link" to="/register"
+          >Register</router-link
+        >
       </div>
     </nav>
     <router-view></router-view>
@@ -30,7 +34,7 @@ export default {
   name: "App",
   data() {
     return {
-      isLoggedIn: flase,
+      isLoggedIn: false,
     };
   },
   created() {

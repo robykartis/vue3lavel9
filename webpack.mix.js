@@ -10,15 +10,8 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
- module.exports = {
-    module: {
-      rules: [
-        { test: /\.css$/, use: 'css-loader' },
-        { test: /\.ts$/, use: 'ts-loader' },
-      ],
-    },
-  };
 
-mix.js('resources/js/app.js', 'public/js').vue()
+mix.js('resources/js/app.js', 'public/js')
+    .vue()
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps();
