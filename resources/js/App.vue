@@ -15,7 +15,7 @@
         <router-link class="nav-item nav-link" to="/dashboard"
           >Dashboard</router-link
         >
-        <a class="nav-item nav-link" @click="logout">Logout</a>
+        <a class="nav-item nav-link" @click="logout" href="/logout">Logout</a>
       </div>
       <div class="navbar-nav" v-else>
         <router-link class="nav-item nav-link" to="/">Home</router-link>
